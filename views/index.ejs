@@ -1,0 +1,100 @@
+<!-- home page  -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font  -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <title>Authentications</title>
+</head>
+
+
+<!-- adding css to home page -->
+<style>
+  body {
+    font-family: 'Recursive', sans-serif;
+    font-size: larger;
+  }
+
+  footer {
+    width: 100%;
+    background-color: #1e272e;
+    margin-top: auto;
+    
+  }
+
+  #pos{
+    text-align: center ;
+  }
+
+</style>
+
+
+<!-- body part -->
+<body>
+
+  <!-- navbar  -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Authentications</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+
+          <!-- if user is logged in , we will show logout button on nav bar-->
+          <!-- otherwise we will show login and sign up button on nav bar-->
+          <% if(logged){ %>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">Logout</a>
+            </li>
+            <% }else{ %>
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/signup">Signup</a>
+              </li>
+              <% } %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar end  -->
+
+  <!-- home page image -->
+  <div class="container py-3">
+    <h1 > Welcome !!</h1>
+    <!--<img src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp" class="img-fluid" alt="Wild Landscape" />-->
+    
+  </div>
+
+  <!--footer part-->
+  <footer>
+    <p id="pos"></p>
+</footer>
+
+
+  <!-- tag to add bootstrap code -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous">
+  </script>
+
+</body>
+
+</html>
